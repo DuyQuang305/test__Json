@@ -44,11 +44,11 @@ function deleteCourses(id) {
                 return response.json()
         })
         .then(function(){
-          
+                var courseItem = document.querySelector('.course-' + id)
+                if(courseItem) {
+                        courseItem.remove()
+                }
         })
-
-        // var courseId = document.querySelector(`.course-${id}`)
-        // courseId.remove
 
 }
 
